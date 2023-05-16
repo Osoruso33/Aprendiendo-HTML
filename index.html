@@ -49,5 +49,83 @@
         <!-- href es a referencia a la que te envia el enlace (ya sea externo o de la propia página) -->
         <h3><a href="página2.html">Entra a la pagina 2</a></h3>
         <h3><a href="cosas/pagina3.html">Entra a la pagina 3</a></h3>
+        <p>
+            <!-- el br se usa para cambiar de renglon asi como el enter -->
+            esto es la prueba para el br <br> como puedes ver cambia el renglon.
+        </p>
+        <!-- target es un atributo para indicarle a el link donde debe mostrarse -->
+        <!-- En este caso estamos aprendiendo _BLANK que es para decirle al link que se muestre en otra pestaña -->
+        <a href="https://google.com" target="_BLANK">Click</a>
+        <!-- Listas -->
+        <!-- ul es la etiqueta que indica una lista desordenada-->
+        <h2>Lista de la compra</h2>
+        <ul>
+            <!-- los li son los articulos de esta lista -->
+            <li>Leche</li>
+            <li>Harina</li>
+            <li>Huevo</li>
+            <li>Harina</li>
+            <li>Agua</li>
+        </ul>
+        <!-- ol es la etiqueta que indica una lista ordenada -->
+        <ol>
+            <li>Leche</li>
+            <li>Harina</li>
+            <li>Huevo</li>
+            <li>Harina</li>
+            <li>Agua</li>
+        </ol>
+        <h1>Imagen</h1>
+        <!-- img es una etiqueta que hace referencia a las imagenes -->
+        <!-- para que aparezca una imagen se selecciona desde el atributo src,
+        el cual funciona igual que el atributo href, puede abrir archivos locales o externos -->
+        <!-- No cambiar los pixeles con Width o Height por que despues no podra
+        ser modificado en CSS -->
+        <img src="Gaviota Team Con fondo.png">
+        <!-- la etiqueta video es para poner videos, obviamente -->
+        <!-- usa src igual que img -->
+        <!-- el video tiene un atributo especial, controls
+        y como su nombre lo indica es un control de video, pero
+        a diferencia de otros atributos controls no necesita valor
+        por que ya esta predefinido -->
+        <video src="Intentando sobrevivir a MEMES ANTIGUOS otra vez.mp4" controls></video>
+        <!-- audio es otra etiqueta que es exactamente igual que el video asi que no hace falta un ejemplo -->
+        <!-- DIVs -->
+        <!-- los DIVs son separadores para agrupar contenidos -->
+        <!-- se usan en CSS así que no vamos a ponr ejemplos,
+        simplemente su sintaxis -->
+        <!-- <div></div> -->
+        <!-- forms son etiquetas que se refieren a un formulario -->
+        <!-- los forms sirven para ingresar inputs -->
+        <form>
+            <!-- inputs: son los datos o tipos de datos de entrada,
+            son como un metodo de entrada para que un dato llegue a 
+            un servidor -->
+            <!-- Hay varios tipos como: -->
+            <!-- Text: de texto -->
+            <!-- hay atributos para inputs, como este, require
+            lo que dice este atibuto es que es un campo que es 
+            obligatorio de rellenar -->
+            <input type="text" required> <br>
+            <!-- Password: con asteriscos (Como una contraseña) -->
+            <input type="password"> <br>
+            <!-- Number: para escribir unicamente numeros -->
+            <input type="number"> <br>
+            <!-- Email: solo permite el siguiente patron: "mail"@"dominio de mail"."dominio" -->
+            <input type="email"> <br>
+            <!-- Color: permite seleccionar un color -->
+            <input type="color"> <br>
+            <!-- Range: permite elegir en un rango dentro de un deslizador -->
+            <!-- tiene dos atributos max (maximo) y min (minimo) -->
+            <input type="range" min="0" max="10"> <br>
+            <!-- Time: deja elegir una hora -->
+            <input type="time"> <br>
+            <!-- Date: deja elegir una fecha -->
+            <input type="date"> <br>
+            <!-- Button: crea un boton -->
+            <input type="button" value="botón"> <br>
+            <!-- Submit: crea un boton de enviar -->
+            <input type="submit"> 
+        </form>
     </body>
 </html>
