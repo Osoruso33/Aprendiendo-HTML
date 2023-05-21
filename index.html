@@ -22,14 +22,65 @@
     <head>
         <!-- title sirve para colocar el titulo de pestaña -->
         <title>Web de tutorial</title>
+        <!-- La etiqueta de los metadatos -->
+        <!-- Los metadatos en si son informaciones que
+        describen otras informaciones, de ahi meta (dentro de algo) -->
+        <!-- en este ejemplo lo usamos para cambiar
+        la codificación del texto a el UTF-8 -->
+        <!-- El UTF-8 es la codificación universal
+        lo que significa que tiene todos los caracteres,
+        acentos, eñes, etc... -->
+        <!-- Para ello usamos el atributo charset que es de
+        char character y set de kit por asi decirlo
+        esto nos permite cambiar la codificación de la web -->
+        <meta charset="UTF-8">
+        <!-- name es el atributo que se refiere al tipo de meta que es -->
+        <!-- keywords son las palabras claves -->
+        <!-- content son el contenido obviamente -->
+        <!-- y harina y lo demas sera lo que cuando busquemos
+        en el navegador, google o el navegador que sea nos mostrara -->
+        <!-- Ejemplo: <meta name="keywords" content="Ingenieria Aeronautica, Aprender">
+        yo ahora busco en google, como aprender ingenieria aeronautica y google me va a
+        mostrar esa web -->
+        <meta name="keywords" content="Harina, leche, huevo, galletitas">
+        <!-- description es la descripicion obvio -->
+        <meta name="description" content="Esta es una web muy asquerosa
+        no entres">
+        <!-- author es el autor de la web, un poco obvio todo -->
+        <meta name="author" content="Pablo">
+        <!-- el copyright todos sabemos para que es (y si no lo sabes que hacer aqui) -->
+        <!-- en content hay que colocar una marca registrada -->
+        <!-- obviamente no voy a ponerlo en el codigo por que esta
+        web no tiene copyright -->
+        <!-- <meta name="copyright" content="x marca registrada"> -->
+        <!-- robots es para decirle a la pagina si se tiene que 
+        mostrar en el navegador o no -->
+        <!-- index es que si noindex es que no -->
+        <!-- Ejemplo: yo busco Web de tutorial, Harina y esta es una web asquerosa
+        no entres (que son todos los metadatos que he proporcionado) 
+    no va a aparecer en google si tengo noindex pero si tengo index si aparecerá-->
+        <meta name="robots" content="index">
+        <!-- esto es par poner el icono de la pagina -->
+        <link rel="icon" href="Gaviota Team Con fondo.ico">
     </head>
     <!-- Body: Front end -->
     <body>
+        <!-- header y demas se explica en structure.html o estructuracion -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="structure.html">Estructuracion</a></li>
+                    <li><a href="index.html">Demostración</a></li>
+                    <li><a href="página2.html">Pagina de relleno</a></li>
+                </ul>
+            </nav>
+        </header>
         <!-- h sirve para colocar textos, se divide entre varios h del h1 al h7 -->
         <!-- h1 solo ponerlo una vez para el seo -->
         <!-- h2 y h3 ponerlo de vez en cuando pero no pasarse-->
         <!-- h4 a h6 ilimitadas pero controlando donde van -->
-        <h1>Hola mundo</h1>
+        <!-- id es el identificador de la palabra, mas abajo se explica para que sirve en #inicio -->
+        <h1 id="inicio">Hola mundo</h1>
         <!-- p es el indicador de párrafo (usar para párrafos) -->
         <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit dignissimos incidunt perspiciatis
@@ -49,13 +100,21 @@
         <!-- href es a referencia a la que te envia el enlace (ya sea externo o de la propia página) -->
         <h3><a href="página2.html">Entra a la pagina 2</a></h3>
         <h3><a href="cosas/pagina3.html">Entra a la pagina 3</a></h3>
+        <h3><a href="structure.html">Entra a el apartado de estructuración</a></h3>
         <p>
             <!-- el br se usa para cambiar de renglon asi como el enter -->
             esto es la prueba para el br <br> como puedes ver cambia el renglon.
         </p>
         <!-- target es un atributo para indicarle a el link donde debe mostrarse -->
         <!-- En este caso estamos aprendiendo _BLANK que es para decirle al link que se muestre en otra pestaña -->
-        <a href="https://google.com" target="_BLANK">Click</a>
+        <!-- Center es para centrar lo que este dentro -->
+        <!-- ATENCIÓN: Para centrar tablas hay que centrarlas desde dentro de td-->
+        <!-- ATENCIÓN: NO SE RECOMIENDA USAR CENTER, MEJOR HACERLO EN CSS -->
+        <center>
+            <!-- target es un atributo para indicarle a el link donde debe mostrarse -->
+            <!-- En este caso estamos aprendiendo _BLANK que es para decirle al link que se muestre en otra pestaña -->
+            <a href="https://google.com" target="_BLANK">Click</a>
+        </center>
         <!-- Listas -->
         <!-- ul es la etiqueta que indica una lista desordenada-->
         <h2>Lista de la compra</h2>
@@ -81,7 +140,10 @@
         el cual funciona igual que el atributo href, puede abrir archivos locales o externos -->
         <!-- No cambiar los pixeles con Width o Height por que despues no podra
         ser modificado en CSS -->
-        <img src="Gaviota Team Con fondo.png">
+        <!-- alt es importantisimo para el SEO y es un texto alternativo
+        por si acaso no aparece la imagen -->
+        <!-- title es para cuando pasemos el cursor por encima nos diga algo -->
+        <img src="Gaviota Team Con fondo.png" alt="Gaviota Team" title="Gaviota Team">
         <!-- la etiqueta video es para poner videos, obviamente -->
         <!-- usa src igual que img -->
         <!-- el video tiene un atributo especial, controls
@@ -133,5 +195,38 @@
             dimensiones predefinidas pero se pueden redimensionar en la web -->
             <textarea></textarea>
         </form>
+        <!-- table es tabla, como las tablas de el word -->
+        <!-- border es opcional pero es para darle bordes a la tabla -->
+        <!-- ya casi no se usa por que se suele hacer en CSS asi que no tomarle importancia -->
+        <table border="1px">
+            <!-- cada tr es una fila de la tabla -->
+            <tr>
+                <!-- td es para definir las casillas de cada fila -->
+                <td><b>Nombre</b></td>
+                <td><b>Apellido</b></td>
+                <td><b>Apodo</b></td>
+                <td><b>Seguidores</b></td>
+            </tr>
+            <tr>
+                <td><b>Pablo</b></td>
+                <td><b>Sanchez</b></td>
+                <td><b>Osoruso</b></td>
+                <td><b>132</b></td>
+            </tr>
+            <tr>
+                <td><b>Javier</b></td>
+                <td><b>Pedrosa</b></td>
+                <td><b>Machoman212</b></td>
+                <td><b>15</b></td>
+            </tr>
+            <tr>
+                <td><b>Pedro</b></td>
+                <td><b>Del hierro</b></td>
+                <td><b>Eltodopoderoso94</b></td>
+                <td><b>3</b></td>
+            </tr>
+        </table>
+        <!-- si ponemos el id de otra palabra junto a un hastag nos mandara a esa palabra -->
+        <a href="#inicio">Volver al inicio</a>
     </body>
 </html>
